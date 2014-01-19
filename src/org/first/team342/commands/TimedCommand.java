@@ -11,6 +11,8 @@ import edu.wpi.first.wpilibj.command.Command;
  * @author FIRST Team 342
  */
 public abstract class TimedCommand extends Command {
+
+    public static final String DEFAULT_TIMED_COMMAND_NAME = "Default Timed Command";
     
     /**
      * The amount of time in milliseconds that the command should run.
@@ -27,6 +29,7 @@ public abstract class TimedCommand extends Command {
      * should run.
      */
     public TimedCommand(long duration) {
+        super(DEFAULT_TIMED_COMMAND_NAME);
         this.duration = duration;
     }
 
