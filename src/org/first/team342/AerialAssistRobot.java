@@ -9,10 +9,8 @@ package org.first.team342;
 
 
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
-import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.first.team342.commands.CommandBase;
+import org.first.team342.subsystems.DriveSystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -23,13 +21,15 @@ import org.first.team342.commands.CommandBase;
  */
 public class AerialAssistRobot extends IterativeRobot {
 
+    private DriveSystem drivetrain = null;
+
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
     public void robotInit() {
         // Initialize all subsystems
-        CommandBase.init();
+        this.drivetrain = DriveSystem.getInstance();
     }
 
     public void autonomousInit() {
@@ -56,6 +56,5 @@ public class AerialAssistRobot extends IterativeRobot {
      * This function is called periodically during test mode
      */
     public void testPeriodic() {
-        LiveWindow.run();
     }
 }
