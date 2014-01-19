@@ -7,4 +7,10 @@ package org.first.team342;
  * floating around.
  */
 public class RobotMap {
+    public static final int DRIVE_JOYSTICK_USB_PORT = 1;
+    
+    public static final int FRONT_LEFT_MOTOR_PWM_CHANNEL = 1;
+    public static final int FRONT_RIGHT_MOTOR_PWM_CHANNEL = 2;
+    public static final int REAR_LEFT_MOTOR_PWM_CHANNEL = 3;
+    public static final int REAR_RIGHT_MOTOR_PWM_CHANNEL = 4;
 }
